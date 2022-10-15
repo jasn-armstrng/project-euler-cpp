@@ -1,3 +1,10 @@
+C++
+                                              C++ Learning resources
+========================================================================================================================
+ YouTube: https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb
+ Microsoft: https://learn.microsoft.com/en-us/cpp/cpp/cpp-language-reference?view=msvc-170
+
+
                                               The C++ compiler:
 ========================================================================================================================
   The compiler's job is convert our code in text into contant data or CPU executable instructions.
@@ -77,6 +84,7 @@
   <return type> <Name>(<parameters>Optional)
   {
     <action>
+    return <something> unless <return type> is void
   }
 
  eg. 1
@@ -84,3 +92,22 @@
   {
     return a * b;
   }
+
+  Note: Every function declaration and definition must specify a return type, whether or not it actually returns a value.
+
+  Function return types:
+    1. Data types: int, String, double
+    2. void: don't return, just do some action
+    3. Optionals: inline, constexpr, static
+
+  Use functions but don't overdo it to break up the actions of your application. Each function needs a stack frame in
+  memory.
+
+  A note on the main function defined as,
+    int main()
+    {
+      <some action(s)>
+    }
+  Note the return type of the main function is not void and there is no return. Only the main function has this allowance.
+
+  Note: functions can be broken up with declarations and definitions.
