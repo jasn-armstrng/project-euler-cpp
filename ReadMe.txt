@@ -1,3 +1,10 @@
+C++
+                                              C++ Learning resources
+========================================================================================================================
+ YouTube: https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb
+ Microsoft: https://learn.microsoft.com/en-us/cpp/cpp/cpp-language-reference?view=msvc-170
+
+
                                               The C++ compiler:
 ========================================================================================================================
   The compiler's job is convert our code in text into contant data or CPU executable instructions.
@@ -35,12 +42,19 @@
 
   More on the Linker here: https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/
 
+                                              C++ One Definition Rule (ODR)
+========================================================================================================================
+ The One Definition Rule (ODR): https://en.cppreference.com/w/cpp/language/definition
+ Applies to: variables, functions, class types, enumeration types, concept or trmplate.
+
 
                                               Variables in C++
 ========================================================================================================================
 
  When we write a programming we want to use, manipulate data. Variables are how we store data for usage in our program.
  Variables a named location in memory in either the stack or the heap.
+
+ A variable identifier can only have one definition - the one definiton rule.
 
  In C++ we have primitive data types for the various data we want to store. The main diff between data types are there
  sizes.
@@ -72,11 +86,13 @@
                                               Functions in C++
 ========================================================================================================================
  Functions in C++ are reusable code structures that exist outside of a class. In a class they are called methods.
+ A function identifier can only have one definition - the one definiton rule.
 
  definition:
   <return type> <Name>(<parameters>Optional)
   {
     <action>
+    return <something> unless <return type> is void
   }
 
  eg. 1
@@ -84,3 +100,72 @@
   {
     return a * b;
   }
+
+  Note: Every function declaration and definition must specify a return type, whether or not it actually returns a value.
+
+  Function return types:
+    1. Data types: int, String, double
+    2. void: don't return, just do some action
+    3. Optionals: inline, constexpr, static
+
+  Use functions but don't overdo it to break up the actions of your application. Each function needs a stack frame in
+  memory.
+
+  A note on the main function defined as,
+    int main()
+    {
+      <some action(s)>
+    }
+  Note the return type of the main function is not void and there is no return. Only the main function has this allowance.
+
+  Note: functions can be broken up with declarations and definitions.
+
+
+                                              C++ Header files
+========================================================================================================================
+
+ Header files are used to declare certain types of functions that can be used throughout your program -> It's the common
+ place where just function declarations are stored.
+
+ Header guard
+ ------------
+ Note at the top of the header file we have the default prepocessor directive,
+  #pragma once
+
+ What this essentially means is include this particular header file once. This is what is called a header guard. We don't
+ want our files to be including the same prepocessor directive more than once.
+ More on header guards here: https://www.learncpp.com/cpp-tutorial/header-guards/
+
+ Another header guard is the #ifndef but most people use #pragma once and most modern compilers support #pragma.
+
+
+ Notes:
+ 1. Header files get included into .cpp files via the #include prepocessor directive.
+ 2. Put header file(s) into a separate header file directory.
+ 3. A header file is NOT a translation unit, but used in prepocessing one.
+ 4.
+    #include "../Header Files/Log.h" // "<relative_path>/header_file.h"
+    #include <iostream>
+
+    Both of the above are header files but this one <iostream> is an example of a C++ standard library header file.
+    Note it also does not have a .h extension.
+
+
+                                              How to debug in C++ (Visual Studio or another IDE)
+========================================================================================================================
+ Debugging with Break points and reading memory. Reading memory is super useful in debugging, understanding code
+ execution.
+
+ The break point pauses the execution at that point. At this point you can observe the state of the elements of your
+ program.
+
+ More detail here https://www.youtube.com/watch?v=0ebzPwixrJA&t=904s
+
+
+                                              C++ Conditional statements and branching
+========================================================================================================================
+ if/else does branching when true does carry overhead as the execution jumps to different memory locations.
+
+ References:
+  1. https://johnysswlab.com/how-branches-influence-the-performance-of-your-code-and-what-can-you-do-about-it/
+  2. https://www.youtube.com/watch?v=qEgCT87KOfc
