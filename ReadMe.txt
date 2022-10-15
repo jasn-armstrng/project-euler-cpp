@@ -127,12 +127,6 @@ C++
  Header files are used to declare certain types of functions that can be used throughout your program -> It's the common
  place where just function declarations are stored.
 
- Header files get included into .cpp files via the #include prepocessor directive.
-
- Put header file(s) into a separate header file directory.
-
- A header file is NOT a translation unit, but used in prepocessing one.
-
  Header guard
  ------------
  Note at the top of the header file we have the default prepocessor directive,
@@ -142,5 +136,16 @@ C++
  want our files to be including the same prepocessor directive more than once.
  More on header guards here: https://www.learncpp.com/cpp-tutorial/header-guards/
 
+ Another header guard is the #ifndef but most people use #pragma once and most modern compilers support #pragma.
 
- Another headr guard is the #ifndef but most people use #pragma once and most modern compilers support #pragma
+
+ Notes:
+ 1. Header files get included into .cpp files via the #include prepocessor directive.
+ 2. Put header file(s) into a separate header file directory.
+ 3. A header file is NOT a translation unit, but used in prepocessing one.
+ 4.
+    #include "../Header Files/Log.h" // "<relative_path>/header_file.h"
+    #include <iostream>
+
+    Both of the above are header files but this one <iostream> is an example of a C++ standard library header file.
+    Note it also does not have a .h extension.
