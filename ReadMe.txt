@@ -160,3 +160,12 @@ C++
  program.
 
  More detail here https://www.youtube.com/watch?v=0ebzPwixrJA&t=904s
+
+
+                                              C++ Conditional statements and branching
+========================================================================================================================
+ if/else does branching when true does carry overhead as the execution jumps to different memory locations.
+
+ References:
+  1. https://johnysswlab.com/how-branches-influence-the-performance-of-your-code-and-what-can-you-do-about-it/
+  2. https://www.youtube.com/watch?v=qEgCT87KOfc
