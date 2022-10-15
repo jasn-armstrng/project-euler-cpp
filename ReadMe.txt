@@ -42,12 +42,19 @@ C++
 
   More on the Linker here: https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/
 
+                                              C++ One Definition Rule (ODR)
+========================================================================================================================
+ The One Definition Rule (ODR): https://en.cppreference.com/w/cpp/language/definition
+ Applies to: variables, functions, class types, enumeration types, concept or trmplate.
+
 
                                               Variables in C++
 ========================================================================================================================
 
  When we write a programming we want to use, manipulate data. Variables are how we store data for usage in our program.
  Variables a named location in memory in either the stack or the heap.
+
+ A variable identifier can only have one definition - the one definiton rule.
 
  In C++ we have primitive data types for the various data we want to store. The main diff between data types are there
  sizes.
@@ -79,6 +86,7 @@ C++
                                               Functions in C++
 ========================================================================================================================
  Functions in C++ are reusable code structures that exist outside of a class. In a class they are called methods.
+ A function identifier can only have one definition - the one definiton rule.
 
  definition:
   <return type> <Name>(<parameters>Optional)
@@ -111,3 +119,28 @@ C++
   Note the return type of the main function is not void and there is no return. Only the main function has this allowance.
 
   Note: functions can be broken up with declarations and definitions.
+
+
+                                              C++ Header files
+========================================================================================================================
+
+ Header files are used to declare certain types of functions that can be used throughout your program -> It's the common
+ place where just function declarations are stored.
+
+ Header files get included into .cpp files via the #include prepocessor directive.
+
+ Put header file(s) into a separate header file directory.
+
+ A header file is NOT a translation unit, but used in prepocessing one.
+
+ Header guard
+ ------------
+ Note at the top of the header file we have the default prepocessor directive,
+  #pragma once
+
+ What this essentially means is include this particular header file once. This is what is called a header guard. We don't
+ want our files to be including the same prepocessor directive more than once.
+ More on header guards here: https://www.learncpp.com/cpp-tutorial/header-guards/
+
+
+ Another headr guard is the #ifndef but most people use #pragma once and most modern compilers support #pragma
