@@ -149,3 +149,14 @@ C++
 
     Both of the above are header files but this one <iostream> is an example of a C++ standard library header file.
     Note it also does not have a .h extension.
+
+
+                                              How to debug in C++ (Visual Studio or another IDE)
+========================================================================================================================
+ Debugging with Break points and reading memory. Reading memory is super useful in debugging, understanding code
+ execution.
+
+ The break point pauses the execution at that point. At this point you can observe the state of the elements of your
+ program.
+
+ More detail here https://www.youtube.com/watch?v=0ebzPwixrJA&t=904s
