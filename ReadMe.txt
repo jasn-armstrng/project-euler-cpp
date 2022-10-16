@@ -1,12 +1,12 @@
 C++
                                         C++ Learning resources
-================================================================================================================
+===============================================================================================================
  YouTube: https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb
  Microsoft: https://learn.microsoft.com/en-us/cpp/cpp/cpp-language-reference?view=msvc-170
 
 
                                         The C++ compiler:
-================================================================================================================
+===============================================================================================================
   The compiler's job is convert our code in text into contant data or CPU executable instructions.
                                                       ------------    ----------------------------
   Flow: Text file.cpp -> [COMPILER] -> Object file.o
@@ -31,7 +31,7 @@ C++
 
 
                                         The C++ Linker
-================================================================================================================
+===============================================================================================================
   Linker is the proces moving source file file.o to an executable.
 
   The Linker ensures that interoperability between the components of your application that are defined across
@@ -44,13 +44,13 @@ C++
   More on the Linker here: https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/
 
                                         C++ One Definition Rule (ODR)
-================================================================================================================
+===============================================================================================================
  The One Definition Rule (ODR): https://en.cppreference.com/w/cpp/language/definition
  Applies to: variables, functions, class types, enumeration types, concept or trmplate.
 
 
                                         Variables in C++
-================================================================================================================
+===============================================================================================================
 
  When we write a programming we want to use, manipulate data. Variables are how we store data for usage in our
  program. Variables are a named location in memory in either the stack or the heap.
@@ -71,8 +71,8 @@ C++
  3-6 can also be unsigned.
  7. float: decimal value up to 4 bytes. float a = 5.5f; The f indicates that float and not double.
  8. double: decimal value up to 8 bytes.
- 9. bool: true(1), false(0). 1 byte. Note that even tho a bool only needs one bit for representing 0 or 1, memory
-    is not is not addressed in bits but bytes and only accessed in bytes.
+ 9. bool: true(1), false(0). 1 byte. Note that even tho a bool only needs one bit for representing 0 or 1, 
+    memoris not is not addressed in bits but bytes and only accessed in bytes.
 
 
  C++ has the sizeof operator that tells us how big the data type is.
@@ -85,9 +85,9 @@ C++
 
 
                                         Functions in C++
-================================================================================================================
- Functions in C++ are reusable code structures that exist outside of a class. In a class they are called methods.
- A function identifier can only have one definition - the one definiton rule.
+===============================================================================================================
+ Functions in C++ are reusable code structures that exist outside of a class. In a class they are called 
+ methods. A function identifier can only have one definition - the one definiton rule.
 
  definition:
   <return type> <Name>(<parameters>Optional)
@@ -125,7 +125,7 @@ C++
 
 
                                         C++ Header files
-================================================================================================================
+===============================================================================================================
 
  Header files are used to declare certain types of functions that can be used throughout your program -> It's
  the common place where just function declarations are stored.
@@ -155,9 +155,9 @@ C++
 
 
                                         How to debug in C++ (Visual Studio or another IDE)
-================================================================================================================
- Debugging with Break points and reading memory. Reading memory is super useful in debugging, understanding code
- execution.
+===============================================================================================================
+ Debugging with Break points and reading memory. Reading memory is super useful in debugging, understanding 
+ code execution.
 
  The break point pauses the execution at that point. At this point you can observe the state of the elements of
  your program.
@@ -166,7 +166,7 @@ C++
 
 
                                         C++ Conditional statements and branching
-================================================================================================================
+===============================================================================================================
  Branches (or jumps) are one of the most common instruction types. Branches change the execution flow of the
  program either conditionally or unconditionally. For the CPU, an effective branch implementation is crucial
  for good performance.
@@ -179,6 +179,6 @@ C++
 
 
                                         C++ Loops (for and while)
-================================================================================================================
+===============================================================================================================
   References:
     1. https://cplusplus.com/doc/tutorial/control/
