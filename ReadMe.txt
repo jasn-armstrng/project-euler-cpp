@@ -30,7 +30,7 @@ C++
   IMPORTANT - In C++ files have no meaning.
 
 
-                                              The C++ Linker
+                                        The C++ Linker
 ================================================================================================================
   Linker is the proces moving source file file.o to an executable.
 
@@ -43,13 +43,13 @@ C++
 
   More on the Linker here: https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/
 
-                                              C++ One Definition Rule (ODR)
+                                        C++ One Definition Rule (ODR)
 ================================================================================================================
  The One Definition Rule (ODR): https://en.cppreference.com/w/cpp/language/definition
  Applies to: variables, functions, class types, enumeration types, concept or trmplate.
 
 
-                                              Variables in C++
+                                        Variables in C++
 ================================================================================================================
 
  When we write a programming we want to use, manipulate data. Variables are how we store data for usage in our
@@ -84,7 +84,7 @@ C++
  Custom data types are constructed from the above primitives
 
 
-                                              Functions in C++
+                                        Functions in C++
 ================================================================================================================
  Functions in C++ are reusable code structures that exist outside of a class. In a class they are called methods.
  A function identifier can only have one definition - the one definiton rule.
@@ -124,7 +124,7 @@ C++
   Note: functions can be broken up with declarations and definitions.
 
 
-                                              C++ Header files
+                                        C++ Header files
 ================================================================================================================
 
  Header files are used to declare certain types of functions that can be used throughout your program -> It's
@@ -154,7 +154,7 @@ C++
     header file. Note it also does not have a .h extension.
 
 
-                                              How to debug in C++ (Visual Studio or another IDE)
+                                        How to debug in C++ (Visual Studio or another IDE)
 ================================================================================================================
  Debugging with Break points and reading memory. Reading memory is super useful in debugging, understanding code
  execution.
@@ -165,12 +165,20 @@ C++
  More detail here https://www.youtube.com/watch?v=0ebzPwixrJA&t=904s
 
 
-                                              C++ Conditional statements and branching
+                                        C++ Conditional statements and branching
 ================================================================================================================
  Branches (or jumps) are one of the most common instruction types. Branches change the execution flow of the
  program either conditionally or unconditionally. For the CPU, an effective branch implementation is crucial
- for good performance
+ for good performance.
+
+ Conditional statements: if/else
 
  References:
   1. https://johnysswlab.com/how-branches-influence-the-performance-of-your-code-and-what-can-you-do-about-it/
   2. https://www.youtube.com/watch?v=qEgCT87KOfc
+
+
+                                        C++ Loops (for and while)
+================================================================================================================
+  References:
+    1. https://cplusplus.com/doc/tutorial/control/
