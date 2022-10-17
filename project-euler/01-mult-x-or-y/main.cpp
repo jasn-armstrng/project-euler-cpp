@@ -5,43 +5,11 @@
 
   Constraints: 1 <= N <= 10^9
 */
-
 #include <iostream>
 #include <math.h>
-
-unsigned long long mult(int x, int y, int N)
-/*
-   Alternate (and faster) method to using the modulo operation:
-   1. Sum all multiples of 3 then 5 that are below N. Common multiples like 15 and 30 will be added twice.
-   2. Subtract all multiples of 15 below N to eliminate one of the duplicates.
-*/
-{
-  unsigned long long sumOfMultiples = 0;
-  int i = 1;
-  while (i*x < N)
-  {
-    sumOfMultiples += i*x;
-    i++;
-  }
-
-  int j = 1;
-  while (j*y < N)
-  {
-    sumOfMultiples += j*y;
-    j++;
-  }
-
-  int k = 1;
-  while (k*(x*y) < N)
-  {
-    sumOfMultiples -= k*(x*y);
-    k++;
-  }
-
-  return sumOfMultiples;
-}
+#include "sumOfMultiples.h"
 
 int main()
 {
-  std::cout << mult(3, 5, pow(10, 9)) << std::endl;
+  std::cout << sumMults(3, 5, pow(10, 9)) << std::endl;
 }
