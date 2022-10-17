@@ -1,7 +1,7 @@
 C++
                                         C++ Learning resources
 ===============================================================================================================
- YouTube: https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb
+ YouTube (The Cherno C++ Playlist): https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb
  Microsoft: https://learn.microsoft.com/en-us/cpp/cpp/cpp-language-reference?view=msvc-170
 
 
