@@ -1,5 +1,7 @@
 1. Move the mult function out from the 'main' file. - Done
 3. Include header include in 'main' file. - Done
-4. Add a file with a test function for the mult function
-5. Add the test function declaration to the header file.
-6. Call the test function from main()
+4. Add a file with a test function for the mult function. - Done
+5. Add the test function declaration to the header file. - Done
+6. Call the test function from main() - Done
+
+It all works! :D
