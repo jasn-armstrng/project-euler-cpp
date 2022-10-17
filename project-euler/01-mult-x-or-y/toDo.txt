@@ -5,3 +5,8 @@
 6. Call the test function from main() - Done
 
 It all works! :D
+
+For future:
+1. Allow the function to take commandline arguments.
+2. Implement C++ defined standard for unit-testing.
+3. Improve on the algorithm used in the sumMult function.
