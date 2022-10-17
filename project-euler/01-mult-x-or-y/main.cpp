@@ -8,8 +8,10 @@
 #include <iostream>
 #include <math.h>
 #include "sumOfMultiples.h"
+#include "test.h"
 
 int main()
 {
-  std::cout << sumMults(3, 5, pow(10, 4)) << std::endl;
+  // std::cout << sumMults(3, 5, pow(10, 4)) << std::endl;
+  testFunction();
 }
