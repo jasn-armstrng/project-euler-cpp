@@ -11,5 +11,5 @@
 
 int main()
 {
-  std::cout << sumMults(3, 5, pow(10, 9)) << std::endl;
+  std::cout << sumMults(3, 5, pow(10, 4)) << std::endl;
 }
