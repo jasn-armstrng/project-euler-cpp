@@ -71,7 +71,7 @@ C++
  3-6 can also be unsigned.
  7. float: decimal value up to 4 bytes. float a = 5.5f; The f indicates that float and not double.
  8. double: decimal value up to 8 bytes.
- 9. bool: true(1), false(0). 1 byte. Note that even tho a bool only needs one bit for representing 0 or 1, 
+ 9. bool: true(1), false(0). 1 byte. Note that even tho a bool only needs one bit for representing 0 or 1,
     memoris not is not addressed in bits but bytes and only accessed in bytes.
 
 
@@ -86,7 +86,10 @@ C++
 
                                         Functions in C++
 ===============================================================================================================
- Functions in C++ are reusable code structures that exist outside of a class. In a class they are called 
+ References:
+  1. https://cplusplus.com/doc/tutorial/functions/
+
+ Functions in C++ are reusable code structures that exist outside of a class. In a class they are called
  methods. A function identifier can only have one definition - the one definiton rule.
 
  definition:
@@ -156,7 +159,7 @@ C++
 
                                         How to debug in C++ (Visual Studio or another IDE)
 ===============================================================================================================
- Debugging with Break points and reading memory. Reading memory is super useful in debugging, understanding 
+ Debugging with Break points and reading memory. Reading memory is super useful in debugging, understanding
  code execution.
 
  The break point pauses the execution at that point. At this point you can observe the state of the elements of
@@ -182,3 +185,81 @@ C++
 ===============================================================================================================
   References:
     1. https://cplusplus.com/doc/tutorial/control/
+
+
+                                        Control flow in C++ - continue, break, return
+===============================================================================================================
+  References:
+    1. continue, break: https://cplusplus.com/doc/tutorial/control/
+    2. return: https://cplusplus.com/doc/tutorial/functions/
+
+
+                                       C++ Pointers
+===============================================================================================================
+  References:
+    1. https://cplusplus.com/doc/tutorial/pointers
+    2. Cherno C++ - Pointers: https://www.youtube.com/watch?v=DTxHyVn0ODg&t=29s
+
+  Memory is the most important thing for a computer to execute program instructions.
+  ----------------------------------------------------------------------------------
+
+  A pointer for all types is an integer that holds a memory address.
+
+  E.g. Creating a point and assigning it a value.
+  int main()
+  {
+    int var = 8;
+    void* ptr = &var; // ptr is a pointer with the value in the memory address of var.
+                      // The & prefix in front of an existing variable is essentially us
+                      // asking for its memory address. Here ptr points to var's memory
+                      // address. In your IDE you may be able to hover over ptr and see
+                      // the address value, it may be in hex.
+  }
+
+  In the above the type of the pointer here does not matter. Types are useful for the manipulation of the memory when we want to
+  read and write to that memory location.
+
+  More on pointer types explained further in the series.
+
+  int main()
+  {
+    int var = 8;
+    int* ptr = &var;
+    // *ptr. When we add a * prefix to a pointer we are getting access to the value at its memory location(address).
+    // This is called dereferencing.
+
+    *ptr = 10; // assigns the memory location the value of 10 which also changes the value of of var to 10.
+               // Recall a variable is an English named location in memory. A pointer is reference to a location in memory.
+
+    int var2 = *ptr; // Assigns var2 the value of 10 thru the pointer dereferencing.
+  }
+
+
+  Note: pointers are also variables stored in memory. A Pointer can point to another.
+
+  Endianess: In computing, endianness is the order or sequence of bytes of a word of digital data in computer memory.
+  more here https://en.wikipedia.org/wiki/Endianness.
+
+
+                                        C++ References
+===============================================================================================================
+  References:
+    1. https://en.cppreference.com/w/cpp/language/reference
+
+
+  Pointers and references are pretty much the same thing when it comes down to what the computer does with them.
+
+  E.g.
+  int main()
+  {
+    int a = 5; // a variable
+    int* b = &a; // a pointer taking the memory address of a
+    int& ref = a; // This is reference or alias to a. This is not a variable. It only exist in our source code.
+                  // Note the ampersand suffix syntax for a reference. Don't confuse with pointer dereferencing.
+                  // We can use the reference of a in functions to modify the value of a because its the alias of a.
+  }
+
+  Note: there is nothing you can do with a reference that cannot be done with a pointer. However pointers are more
+  than just an alias and therefore more powerful.
+
+  A reference shouldn't alias a different variable or pointer.
