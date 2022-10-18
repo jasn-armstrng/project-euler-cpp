@@ -1,6 +1,6 @@
 #include <iostream>
 #include <math.h>
-#include "sumOfMultiples.h"
+#include "../headers/sumOfMultiples.h"
 
 void testFunction()
 {
