@@ -71,7 +71,7 @@ C++
  3-6 can also be unsigned.
  7. float: decimal value up to 4 bytes. float a = 5.5f; The f indicates that float and not double.
  8. double: decimal value up to 8 bytes.
- 9. bool: true(1), false(0). 1 byte. Note that even tho a bool only needs one bit for representing 0 or 1, 
+ 9. bool: true(1), false(0). 1 byte. Note that even tho a bool only needs one bit for representing 0 or 1,
     memoris not is not addressed in bits but bytes and only accessed in bytes.
 
 
@@ -86,7 +86,10 @@ C++
 
                                         Functions in C++
 ===============================================================================================================
- Functions in C++ are reusable code structures that exist outside of a class. In a class they are called 
+ References:
+  1. https://cplusplus.com/doc/tutorial/functions/
+
+ Functions in C++ are reusable code structures that exist outside of a class. In a class they are called
  methods. A function identifier can only have one definition - the one definiton rule.
 
  definition:
@@ -156,7 +159,7 @@ C++
 
                                         How to debug in C++ (Visual Studio or another IDE)
 ===============================================================================================================
- Debugging with Break points and reading memory. Reading memory is super useful in debugging, understanding 
+ Debugging with Break points and reading memory. Reading memory is super useful in debugging, understanding
  code execution.
 
  The break point pauses the execution at that point. At this point you can observe the state of the elements of
@@ -182,3 +185,10 @@ C++
 ===============================================================================================================
   References:
     1. https://cplusplus.com/doc/tutorial/control/
+
+
+                                        Control flow in C++ - continue, break, return
+===============================================================================================================
+  References:
+    1. continue, break: https://cplusplus.com/doc/tutorial/control/
+    2. return: https://cplusplus.com/doc/tutorial/functions/
