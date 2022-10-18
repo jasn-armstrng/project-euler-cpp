@@ -7,8 +7,8 @@
 */
 #include <iostream>
 #include <math.h>
-#include "sumOfMultiples.h"
-#include "test.h"
+#include "../headers/sumOfMultiples.h"
+#include "../headers/test.h"
 
 int main()
 {
