@@ -239,3 +239,27 @@ C++
 
   Endianess: In computing, endianness is the order or sequence of bytes of a word of digital data in computer memory.
   more here https://en.wikipedia.org/wiki/Endianness.
+
+
+                                        C++ References
+===============================================================================================================
+  References:
+    1. https://en.cppreference.com/w/cpp/language/reference
+
+
+  Pointers and references are pretty much the same thing when it comes down to what the computer does with them.
+
+  E.g.
+  int main()
+  {
+    int a = 5; // a variable
+    int* b = &a; // a pointer taking the memory address of a
+    int& ref = a; // This is reference or alias to a. This is not a variable. It only exist in our source code.
+                  // Note the ampersand suffix syntax for a reference. Don't confuse with pointer dereferencing.
+                  // We can use the reference of a in functions to modify the value of a because its the alias of a.
+  }
+
+  Note: there is nothing you can do with a reference that cannot be done with a pointer. However pointers are more
+  than just an alias and therefore more powerful.
+
+  A reference shouldn't alias a different variable or pointer.
