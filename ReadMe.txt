@@ -276,7 +276,7 @@ C++
 
  class Player
  {
-  public // allows access to class variables outside the class
+  public: // allows access to class variables outside the class
     // Class variables
     int positionX, positionY;
     int speed;
