@@ -245,7 +245,7 @@ C++
 ===============================================================================================================
   References:
     1. https://en.cppreference.com/w/cpp/language/reference
-
+    2. Dereferencing: https://en.wikipedia.org/wiki/Indirection
 
   Pointers and references are pretty much the same thing when it comes down to what the computer does with them.
 
@@ -263,3 +263,43 @@ C++
   than just an alias and therefore more powerful.
 
   A reference shouldn't alias a different variable or pointer.
+
+
+                                        C++ Classes (Basic intro)
+===============================================================================================================
+ References:
+  1. https://cplusplus.com/doc/tutorial/classes/
+
+ Simply, classes are a way to group data (attributes) and functionality (methods) together.
+
+ e.g.
+
+ class Player
+ {
+  public // allows access to class variables outside the class
+    // Class variables
+    int positionX, positionY;
+    int speed;
+
+    // class method. Move the player.
+    void Move(int x, int y)
+    {
+      x = x * speed;
+      y = y * speed;
+    }
+
+ }; // note we need a ; at the end of a class definition.
+
+ int main()
+ {
+  Player playerOne; // instantiation of the class player
+  //playerOne.positionX = 5;
+  playerOne.Move(1, -1);
+ }
+
+
+                                        C++ Structs
+===============================================================================================================
+  References:
+    1. https://cplusplus.com/doc/tutorial/structures/
+  A class is private by default. A struct is public by default.
