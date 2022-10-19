@@ -3,6 +3,12 @@
   information that we want to print to the console for debugging etc.
 
   Write error to console according to the log level.
+
+  Notes:
+    main.cpp:13:29: warning: default member initializer for non-static data member is a C++11 extension [-Wc++11-extensions]
+      const int LogLevelError = 0;
+                              ^
+    Resolved this by adding the static keyword before const. I'm not sure yet why this works so making a note of it.
 */
 #include <iostream>
 
