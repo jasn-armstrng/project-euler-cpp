@@ -1,5 +1,6 @@
 /*
-  Creating a log class to manage our log messages -
+  Following The Cherno's C++ series. This the beginning of a Log class that will be improved over the video series.
+  Creating a Log class to manage our log messages -
   information that we want to print to the console for debugging etc.
 
   Write error to console according to the log level.
@@ -53,7 +54,9 @@ class Log
 
 int main(){
   Log log;
-  log.SetLevel(log.LogLevelWarning);
+  log.SetLevel(log.LogLevelError);
+  log.Error("Hello");
   log.Warn("Hello");
+  log.Info("Hello");
   std::cin.get();
 }
