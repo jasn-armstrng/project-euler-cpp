@@ -265,10 +265,10 @@ C++
   A reference shouldn't alias a different variable or pointer.
 
 
-                                        C++ Classes
+                                        C++ Classes (Basic intro)
 ===============================================================================================================
  References:
-  1.
+  1. https://cplusplus.com/doc/tutorial/classes/
 
  Simply, classes are a way to group data (attributes) and functionality (methods) together.
 
@@ -296,3 +296,10 @@ C++
   //playerOne.positionX = 5;
   playerOne.Move(1, -1);
  }
+
+
+                                        C++ Structs
+===============================================================================================================
+  References:
+    1. https://cplusplus.com/doc/tutorial/structures/
+  A class is private by default. A struct is public by default.
