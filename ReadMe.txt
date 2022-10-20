@@ -303,3 +303,22 @@ C++
   References:
     1. https://cplusplus.com/doc/tutorial/structures/
   A class is private by default. A struct is public by default.
+
+
+                                        C++ Static keyword
+===============================================================================================================
+  References:
+    1. https://en.cppreference.com/w/cpp/language/static
+    2. https://stackoverflow.com/questions/15235526/the-static-keyword-and-its-various-uses-in-c
+
+  The static keyword in C++ actually has two meanings depending on what the context is. One of those applies to
+  when you use the static keyword inside a class or struct, the other outside,
+    - static outside of a class means the linkage of that symbol that you declare to be static is going to be
+      internal, meaning that it's only going to be visible to that translation unit that you've defined it in.
+    - static inside a class means that a variable is actually going to share memory with all the instances of
+      the class, meaning that basicallly across all instances that you create of that class or struct there's
+      only going to be one instance of that static variable. A similar thing applies to static methods in a
+      class.
+
+  Tip: Try and mark your functions and variables static unless you actually need them to be linked across
+  TUs (translation units).
