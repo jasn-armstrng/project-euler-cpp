@@ -1,4 +1,5 @@
-#include <cstdint>
+// This solution passed all test cases on the Hackerrank PE competition.
+#include <cstdint> // to use the int64_t
 
 int64_t SumFibs(int64_t limit)
 {
