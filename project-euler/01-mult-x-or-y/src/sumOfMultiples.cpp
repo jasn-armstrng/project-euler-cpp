@@ -4,28 +4,23 @@
    1. Sum all multiples of 3 then 5 that are below N. Common multiples like 15 and 30 will be added twice.
    2. Subtract all multiples of 15 below N to eliminate one of the duplicates.
 */
-unsigned long long sumMults(int x, int y, int N)
+#include <cstdint>
+
+uint64_t sumMults(int x, int y, uint64_t N)
 {
-  unsigned long long sum_ = 0;
-  int i = 1;
-  while (i*x < N)
-  {
-    sum_ += i*x;
-    i++;
+  uint64_t sum_ = 0;
+  uint64_t i, j, k;
+
+  for (i = x; i < N; i += x){
+    sum_ += i;
   }
 
-  int j = 1;
-  while (j*y < N)
-  {
-    sum_ += j*y;
-    j++;
+  for (j = y; j < N; j += y){
+    sum_ += j;
   }
 
-  int k = 1;
-  while (k*(x*y) < N)
-  {
-    sum_ -= k*(x*y);
-    k++;
+  for (k = (x*y); k < N; k += (x*y)){
+    sum_ -= k;
   }
 
   return sum_;
