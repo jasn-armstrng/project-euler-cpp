@@ -1,3 +1,3 @@
 #pragma once
 
-unsigned long long sumMults(int x, int y, int N);
+uint64_t sumMults(int x, int y, uint64_t N);
