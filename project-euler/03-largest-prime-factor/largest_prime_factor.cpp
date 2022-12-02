@@ -2,28 +2,21 @@
 #include <iostream>
 #include <vector>
 
-std::vector<bool> sieve_of_eratosthones(int max_val);
+bool is_prime(long number);
 
 int main()
 {
- // generate primes, check if they factor into i
+ std::cout << is_prime(7) << '\n';
 }
 
-std::vector<bool> sieve_of_eratosthones(int max_val)
+bool is_prime(long number)
 {
-  std::vector<bool> b_values(max_val);
-
-  for (int i = 0; i < max_val; ++i)
-    b_values[i] = true; // Initialize all vector values to true
-
-  for (int i = 2; i*i < max_val; ++i)
+  if (number < 2) { return false; };
+  if (number == 2) { return true; }
+  if (number % 2 == 0) { return false; }
+  for (long i = 3; (i*i) <= number; i+=2)
   {
-    if(b_values[i]) // ignore index values to false. Indexes = Multiples
-      for (int j = i*i; j < max_val; j+=i)
-      {
-        b_values[j] = false; // set the multiples of i false
-      }
+    if (number % i == 0) { return false; }
   }
-
-  return b_values;
+  return true;
 }
