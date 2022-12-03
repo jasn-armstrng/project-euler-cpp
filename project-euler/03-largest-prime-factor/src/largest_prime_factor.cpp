@@ -16,10 +16,7 @@ int main()
   // prime flag
   bool prime = false;
 
-  // method 1: from divisor ... n check if the quotient is prime. If prime stop
-  // check and display quotient.
-
-  // ask you
+  // ask user for input
   std::cout << "Find largest prime factor of: ";
   std::cin >> number;
 
@@ -29,6 +26,8 @@ int main()
     return 0;
   }
 
+  // method 1: from divisor ... n check if the quotient is prime. If prime stop
+  // check and display quotient.
   while (!prime) {
     // check if the number/divisor evenly divides
     if (number%divisor == 0) {
