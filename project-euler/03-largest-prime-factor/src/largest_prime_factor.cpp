@@ -7,12 +7,20 @@ uint64_t find_largest_prime_factor(uint64_t n);
 bool is_prime(uint64_t n);
 
 int main()
-{
+try {
   ui();
   return 0;
 }
+catch (std::exception& e) {
+  std::cerr << "Error: " << e.what() << '\n';
+  return 1;
+}
+catch (...) {
+  std::cerr << "Error: Unknown exception\n";
+  return 2;
+}
 
-void ui(){
+void ui() {
   // ask for user input, validate, call find_largest_prime_factor, print answer
   // to console
   uint64_t number;
@@ -22,6 +30,7 @@ void ui(){
   // if input is prime, notify user
   if (is_prime(number)) { error("Number is prime"); }
 
+  // print largest prime factor
   std::cout << "Answer: " << find_largest_prime_factor(number) << '\n';
 }
 
@@ -60,8 +69,7 @@ bool is_prime(uint64_t n) {
   // ---------------------------------------------------------
   if (n == 2 || n == 3) { return true; }
   if (n <= 1 || n % 2 == 0 || n % 3 == 0) { return false; }
-  for (uint64_t i = 5; (i * i) <= n; i += 6)
-  {
+  for (uint64_t i = 5; (i * i) <= n; i += 6) {
     if (n % i == 0 || n % (i + 2) == 0) { return false; }
   }
   return true;
