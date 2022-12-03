@@ -1,22 +1,57 @@
 // This program finds the largest prime factor of an integer i
 #include <iostream>
-#include <vector>
 
-bool is_prime(long number);
+bool is_prime(uint64_t n);
 
 int main()
 {
- std::cout << is_prime(7) << '\n';
+  // number to find the highest prime factor of
+  uint64_t number;
+  // the highest possible prime factor of that number is the quotient of number/2
+  uint64_t divisor = 2;
+
+  // largest factor
+  uint64_t quotient = -1;
+
+  // prime flag
+  bool prime = false;
+
+  // method 1: from divisor ... n check if the quotient is prime. If prime stop
+  // check and display quotient.
+
+  // ask you
+  std::cout << "Find largest prime factor of: ";
+  std::cin >> number;
+
+  // if input is prime, notify user
+  if (is_prime(number)) {
+    std::cout << "Error: Number is prime\n";
+    return 0;
+  }
+
+  while (!prime) {
+    // check if the number/divisor evenly divides
+    if (number%divisor == 0) {
+      // end iteration of quotient is prime
+      quotient = number/divisor;
+      prime = is_prime(quotient);
+    }
+    // increment the divisor
+    ++divisor;
+  }
+  std::cout << "Answer: " << quotient << '\n';
+  return 0;
 }
 
-bool is_prime(long number)
+// check primality using the simple 6k +/- 1 optimization. More on that here,
+// https://en.wikipedia.org/wiki/Primality_test
+bool is_prime(uint64_t n)
 {
-  if (number < 2) { return false; };
-  if (number == 2) { return true; }
-  if (number % 2 == 0) { return false; }
-  for (long i = 3; (i*i) <= number; i+=2)
+  if (n == 2 || n == 3) { return true; }
+  if (n <= 1 || n % 2 == 0 || n % 3 == 0) { return false; }
+  for (uint64_t i = 5; (i * i) <= n; i += 6)
   {
-    if (number % i == 0) { return false; }
+    if (n % i == 0 || n % (i + 2) == 0) { return false; }
   }
   return true;
 }
