@@ -42,10 +42,10 @@ int main()
   return 0;
 }
 
-// check primality using the simple 6k +/- 1 optimization. More on that here,
-// https://en.wikipedia.org/wiki/Primality_test
-bool is_prime(uint64_t n)
-{
+bool is_prime(uint64_t n) {
+  // check primality using the simple 6k +/- 1 optimization. Reference at end.
+  // pre-condition: n is a +ve integer
+  // post-condition: return boolean indicator of n's primality
   if (n == 2 || n == 3) { return true; }
   if (n <= 1 || n % 2 == 0 || n % 3 == 0) { return false; }
   for (uint64_t i = 5; (i * i) <= n; i += 6)
@@ -53,4 +53,5 @@ bool is_prime(uint64_t n)
     if (n % i == 0 || n % (i + 2) == 0) { return false; }
   }
   return true;
+  // https://en.wikipedia.org/wiki/Primality_test
 }
