@@ -1,6 +1,7 @@
-// This program finds the largest prime factor of an integer i
+// This program finds the largest prime factor of an integer
 #include <iostream>
 
+// ------------------------ function declarations ------------------------------
 void ui();
 void inline error(const std::string& s);
 uint64_t find_largest_prime_factor(uint64_t n);
@@ -20,6 +21,7 @@ catch (...) {
   return 2;
 }
 
+// ------------------------ function definitions -------------------------------
 void ui() {
   // ask for user input, validate, call find_largest_prime_factor, print answer
   // to console
