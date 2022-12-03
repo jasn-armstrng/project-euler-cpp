@@ -1,27 +1,31 @@
 // This program finds the largest prime factor of an integer i
 #include <iostream>
 
-bool is_prime(uint64_t n);
+void ui();
+void inline error(const std::string& s);
 uint64_t find_largest_prime_factor(uint64_t n);
+bool is_prime(uint64_t n);
 
 int main()
 {
-  // number to find the highest prime factor of
-  uint64_t number;
+  ui();
+  return 0;
+}
 
-  // ask user for input
+void ui(){
+  // ask for user input, validate, call find_largest_prime_factor, print answer
+  // to console
+  uint64_t number;
   std::cout << "Find largest prime factor of: ";
   std::cin >> number;
 
   // if input is prime, notify user
-  if (is_prime(number)) {
-    std::cout << "Error: Number is prime\n";
-    return 0;
-  }
+  if (is_prime(number)) { error("Number is prime"); }
 
   std::cout << "Answer: " << find_largest_prime_factor(number) << '\n';
-  return 0;
 }
+
+void inline error(const std::string& s) { throw std::runtime_error(s); };
 
 uint64_t find_largest_prime_factor(uint64_t n) {
   // finds a number's largest prime factor
