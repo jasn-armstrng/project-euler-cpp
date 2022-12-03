@@ -10,9 +10,10 @@
 #include <iostream>
 
 int reverse_integer(const int n);
+int max(const int m, const int n);
 
 int main() {
-
+  std::cout << max(9, 8) << '\n';
   std::cout << reverse_integer(631) << '\n';
   return 0;
 }
@@ -33,3 +34,11 @@ int reverse_integer(const int n) {
   }
   return reverse;
 }
+
+int max(const int m, const int n) {
+  // find the max of two numbers.
+  // pre-conditions: m and n are real numbers
+  // post-conditions: return m or n. If both numbers are equal, default to m
+  if (m < n) { return n; }
+  return m;
+};
