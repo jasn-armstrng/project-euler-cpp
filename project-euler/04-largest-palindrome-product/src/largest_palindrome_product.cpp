@@ -1,4 +1,5 @@
-// This program find the largest palindrome product of two 3-digit numbers
+// This program find the largest palindrome product of two 3-digit numbers less
+// than n. Hackerrank version of this question
 
 // First approach: mult each element of 100 ... 999 * each in 999 ... 100
 // check if each product is palindrome
@@ -9,13 +10,30 @@
 // of previous to the current palindrome
 #include <iostream>
 
+int palindrome_product(int n);
 int reverse_integer(const int n);
 int max(const int m, const int n);
 
 int main() {
-  std::cout << max(9, 8) << '\n';
-  std::cout << reverse_integer(631) << '\n';
+  std::cout << palindrome_product(998001) << '\n'; // Ans: 906609
+  std::cout << palindrome_product(800000) << '\n'; // Ans: 793397
   return 0;
+}
+
+int palindrome_product(int n) {
+  // find the largest palindrome product of two 3-digit numbers less than n
+  // pre-conditions: n is a +ve integer <= 998001
+  // post-condtions: return the largest palindrome
+  int palindrome = 0;
+  for (int i = 100; i < 1000; ++i) {
+    for (int j = 100; j < 1000; ++j) {
+      int product = i*j;
+      if (product == reverse_integer(product) && product < n) {
+        palindrome = max(palindrome, product);
+      }
+    }
+  }
+  return palindrome;
 }
 
 int reverse_integer(const int n) {
