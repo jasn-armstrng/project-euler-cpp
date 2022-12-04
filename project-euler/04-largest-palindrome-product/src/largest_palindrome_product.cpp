@@ -1,13 +1,13 @@
 // This program find the largest palindrome product of two 3-digit numbers less
-// than n. Hackerrank version of this question
+// than n. This is the Hackerrank version of this question.
 
-// First approach: mult each element of 100 ... 999 * each in 999 ... 100
-// check if each product is palindrome
-// store the first palindrome. replace the first palindrome with a subsequent
-// higher and so on
+// - First approach: Do nested iteration - 100 ... 999 * 100 ... 999
+// - Check if each product is palindrome and less than n
+// - Store the first palindrome. Replace the first palindrome with a subsequent
+//   higher and so on
 
-// What I need: a function to reverse an int, a function to compare magnitude
-// of previous to the current palindrome
+// Functions: one to reverse an int, one to compare magnitude of previous to the
+// current palindrome
 #include <iostream>
 
 int palindrome_product(int n);
